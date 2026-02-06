@@ -5,76 +5,383 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00FF00"
     tools:context=".task2_layout">
 
-    <Button
-        android:id="@+id/signin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_info_details" />
-
-    <TextView
-        android:id="@+id/userid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <Button
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <TextView
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <EditText
-        android:id="@+id/passwordedit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="#FF0000"
+        android:rotation="15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="105sp"
-        android:text="TextView" />
+        android:rotation="-90"
+        android:text="NO LOGIN ZONE"
+        android:textColor="#0000FF"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:contentDescription="Scary Background"
+        android:scaleType="centerInside"
+        app:srcCompat="@android:drawable/ic_dialog_alert" />
+
+    <TextView
+        android:id="@+id/userid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/useridedit"
+        android:rotation="180"
+        android:text="Enter User Identity Here (maybe)"
+        android:textColor="#0000FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/useridedit"
+        android:layout_width="30dp"
+        android:layout_height="100dp"
+        android:autofillHints="username"
+        android:background="#0000FF"
+        android:ems="30"
+        android:hint="ID"
+        android:inputType="text"
+        android:textColor="#FFFF00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/passwordedit"
+        android:text="S E C R E T"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/passwordedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="password"
+        android:background="#FFFF00"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:rotation="5"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="32dp"
+        android:layout_height="19dp"
+        android:backgroundTint="#FF00FF"
+        android:contentDescription="Invisible Sign In"
+        android:text=""
+        android:textSize="2sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I DON'T WANT AN ACCOUNT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/useridedit" />
 
     <CheckBox
         android:id="@+id/rememberMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Checkbox" />
+        android:layout_marginTop="116dp"
+        android:rotation="45"
+        android:text="Remember me forever"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/uselessButton1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="DON'T CLICK"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/useridedit"
+    <Button
+        android:id="@+id/uselessButton2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:text="INVISIBLE BUTTON"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/uselessButton3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="264dp"
+        android:alpha="0.4"
+        android:text="MAYBE THIS LOGS YOU IN?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/uselessButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
-    <View
-        android:id="@+id/divider"
-        android:layout_width="wrap_content"
+        android:text="EXIT"
+        android:backgroundTint="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/passwordedit"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/uselessButton5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homer_head_detail"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#FED90F"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <Button
+        android:id="@+id/homer_ear_left"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:backgroundTint="#FED90F"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_head_detail"
+        app:layout_constraintEnd_toStartOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_head_detail"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/homer_ear_right"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:backgroundTint="#FED90F"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_head_detail"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/homer_muzzle_detail"
+        android:layout_width="90dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#D1B271"
+        android:text="D'OH!"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="5dp"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_head_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_head_detail" />
+
+    <Button
+        android:id="@+id/homer_eye_l_detail"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/homer_muzzle_detail"
+        app:layout_constraintEnd_toStartOf="@+id/homer_eye_r_detail"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_head_detail"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <Button
+        android:id="@+id/homer_eye_r_detail"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/homer_muzzle_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toEndOf="@+id/homer_eye_l_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_head_detail"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <Button
+        android:id="@+id/homer_eyebrow_l"
+        android:layout_width="35dp"
+        android:layout_height="2dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/homer_eye_l_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_eye_l_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_eye_l_detail" />
+
+    <Button
+        android:id="@+id/homer_eyebrow_r"
+        android:layout_width="35dp"
+        android:layout_height="2dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/homer_eye_r_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_eye_r_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_eye_r_detail" />
+
+    <Button
+        android:id="@+id/homer_pupil_r_detail"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_eye_r_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_eye_r_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_eye_r_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_eye_r_detail" />
+
+    <Button
+        android:id="@+id/homer_pupil_r_detail2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_eye_l_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_eye_r_detail"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="@+id/homer_eye_l_detail"
+        app:layout_constraintTop_toBottomOf="@+id/homer_eyebrow_l"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <Button
+        android:id="@+id/homer_nose_outline"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/homer_muzzle_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toBottomOf="@+id/homer_eye_l_detail"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/homer_nose_detail"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:backgroundTint="#FED90F"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_nose_outline"
+        app:layout_constraintEnd_toEndOf="@+id/homer_nose_outline"
+        app:layout_constraintStart_toStartOf="@+id/homer_nose_outline"
+        app:layout_constraintTop_toTopOf="@+id/homer_nose_outline" />
+
+    <Button
+        android:id="@+id/homer_hair_m1"
+        android:layout_width="15dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="-5dp"
+        android:backgroundTint="#000000"
+        android:rotation="45"
+        app:layout_constraintEnd_toStartOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_head_detail" />
+
+    <Button
+        android:id="@+id/homer_hair_m2"
+        android:layout_width="15dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#000000"
+        android:rotation="-45"
+        app:layout_constraintEnd_toEndOf="@+id/homer_eye_r_detail"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toBottomOf="@+id/homer_hair1" />
+
+    <Button
+        android:id="@+id/homer_hair1"
+        android:layout_width="40dp"
         android:layout_height="1dp"
-        android:background="#888888" />
+        android:backgroundTint="#000000"
+        android:rotation="-20"
+        app:layout_constraintBottom_toTopOf="@+id/homer_head_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_head_detail"
+        android:layout_marginBottom="-1dp"/>
+
+    <Button
+        android:id="@+id/homer_hair2"
+        android:layout_width="40dp"
+        android:layout_height="1dp"
+        android:backgroundTint="#000000"
+        android:rotation="20"
+        app:layout_constraintBottom_toTopOf="@+id/homer_hair1"
+        app:layout_constraintEnd_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_head_detail"
+        android:layout_marginBottom="-5dp"/>
+
+    <Button
+        android:id="@+id/homer_donut"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#FF69B4"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.842" />
+
+    <Button
+        android:id="@+id/donut_hole"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:backgroundTint="#00FF00"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_donut"
+        app:layout_constraintEnd_toEndOf="@+id/homer_donut"
+        app:layout_constraintStart_toStartOf="@+id/homer_donut"
+        app:layout_constraintTop_toTopOf="@+id/homer_donut" />
 
     <TextView
         android:id="@+id/helperText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forgot your password?" />
+        android:alpha="0.1"
+        android:text="HELP"
+        android:textSize="190dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
