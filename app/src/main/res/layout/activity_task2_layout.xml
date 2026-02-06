@@ -87,6 +87,7 @@
         android:inputType="textPassword"
         android:rotation="5"
         app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -94,9 +95,12 @@
         android:layout_width="32dp"
         android:layout_height="19dp"
         android:backgroundTint="#FF00FF"
+        android:contentDescription="Invisible Sign In"
         android:text=""
         android:textSize="2sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -134,6 +138,8 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:text="INVISIBLE BUTTON"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -153,7 +159,8 @@
         android:text="EXIT"
         android:backgroundTint="#FF0000"
         app:layout_constraintBottom_toTopOf="@+id/passwordedit"
-        app:layout_constraintEnd_toStartOf="@+id/divider" />
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/uselessButton5"
@@ -164,6 +171,204 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homer_head_detail"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#FED90F"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <Button
+        android:id="@+id/homer_ear_left"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:backgroundTint="#FED90F"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_head_detail"
+        app:layout_constraintEnd_toStartOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_head_detail"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/homer_ear_right"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:backgroundTint="#FED90F"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_head_detail"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/homer_muzzle_detail"
+        android:layout_width="90dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#D1B271"
+        android:text="D'OH!"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="5dp"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_head_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_head_detail" />
+
+    <Button
+        android:id="@+id/homer_eye_l_detail"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/homer_muzzle_detail"
+        app:layout_constraintEnd_toStartOf="@+id/homer_eye_r_detail"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_head_detail"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <Button
+        android:id="@+id/homer_eye_r_detail"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/homer_muzzle_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toEndOf="@+id/homer_eye_l_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_head_detail"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <Button
+        android:id="@+id/homer_eyebrow_l"
+        android:layout_width="35dp"
+        android:layout_height="2dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/homer_eye_l_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_eye_l_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_eye_l_detail" />
+
+    <Button
+        android:id="@+id/homer_eyebrow_r"
+        android:layout_width="35dp"
+        android:layout_height="2dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/homer_eye_r_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_eye_r_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_eye_r_detail" />
+
+    <Button
+        android:id="@+id/homer_pupil_r_detail"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_eye_r_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_eye_r_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_eye_r_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_eye_r_detail" />
+
+    <Button
+        android:id="@+id/homer_pupil_r_detail2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_eye_l_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_eye_r_detail"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="@+id/homer_eye_l_detail"
+        app:layout_constraintTop_toBottomOf="@+id/homer_eyebrow_l"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <Button
+        android:id="@+id/homer_nose_outline"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/homer_muzzle_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toBottomOf="@+id/homer_eye_l_detail"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/homer_nose_detail"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:backgroundTint="#FED90F"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_nose_outline"
+        app:layout_constraintEnd_toEndOf="@+id/homer_nose_outline"
+        app:layout_constraintStart_toStartOf="@+id/homer_nose_outline"
+        app:layout_constraintTop_toTopOf="@+id/homer_nose_outline" />
+
+    <Button
+        android:id="@+id/homer_hair_m1"
+        android:layout_width="15dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="-5dp"
+        android:backgroundTint="#000000"
+        android:rotation="45"
+        app:layout_constraintEnd_toStartOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toTopOf="@+id/homer_head_detail" />
+
+    <Button
+        android:id="@+id/homer_hair_m2"
+        android:layout_width="15dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#000000"
+        android:rotation="-45"
+        app:layout_constraintEnd_toEndOf="@+id/homer_eye_r_detail"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintTop_toBottomOf="@+id/homer_hair1" />
+
+    <Button
+        android:id="@+id/homer_hair1"
+        android:layout_width="40dp"
+        android:layout_height="1dp"
+        android:backgroundTint="#000000"
+        android:rotation="-20"
+        app:layout_constraintBottom_toTopOf="@+id/homer_head_detail"
+        app:layout_constraintEnd_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_head_detail"
+        android:layout_marginBottom="-1dp"/>
+
+    <Button
+        android:id="@+id/homer_hair2"
+        android:layout_width="40dp"
+        android:layout_height="1dp"
+        android:backgroundTint="#000000"
+        android:rotation="20"
+        app:layout_constraintBottom_toTopOf="@+id/homer_hair1"
+        app:layout_constraintEnd_toEndOf="@+id/homer_head_detail"
+        app:layout_constraintStart_toStartOf="@+id/homer_head_detail"
+        android:layout_marginBottom="-5dp"/>
+
+    <Button
+        android:id="@+id/homer_donut"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#FF69B4"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.842" />
+
+    <Button
+        android:id="@+id/donut_hole"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:backgroundTint="#00FF00"
+        app:layout_constraintBottom_toBottomOf="@+id/homer_donut"
+        app:layout_constraintEnd_toEndOf="@+id/homer_donut"
+        app:layout_constraintStart_toStartOf="@+id/homer_donut"
+        app:layout_constraintTop_toTopOf="@+id/homer_donut" />
 
     <TextView
         android:id="@+id/helperText"
