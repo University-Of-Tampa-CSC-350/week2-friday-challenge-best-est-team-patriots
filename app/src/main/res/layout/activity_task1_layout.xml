@@ -7,75 +7,128 @@
     android:layout_height="match_parent"
     tools:context=".task1_layout">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/signin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        <TextView
+            android:id="@+id/userid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userid_text"
+            tools:layout_editor_absoluteX="175dp"
+            tools:layout_editor_absoluteY="51dp"
+            tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_info_details" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/info_icon_content_description"
+            app:srcCompat="@android:drawable/ic_menu_info_details"
+            tools:layout_editor_absoluteX="387dp"
+            tools:layout_editor_absoluteY="1dp"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/userid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="48dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="0dp">
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_subtext"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="176dp"
+                tools:layout_editor_absoluteY="332dp" />
 
-    <TextView
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+            <EditText
+                android:id="@+id/useridedit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="username"
+                android:ems="10"
+                android:hint="@string/name_hint"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="100dp"
+                tools:layout_editor_absoluteY="354dp" />
 
-    <EditText
-        android:id="@+id/passwordedit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+            <TextView
+                android:id="@+id/helperText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="134dp"
+                tools:layout_editor_absoluteY="444dp" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="105sp"
-        android:text="TextView" />
+            <Button
+                android:id="@+id/register"
+                android:layout_width="112dp"
+                android:layout_height="48dp"
+                android:text="@string/register_button_text"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="588dp" />
 
-    <CheckBox
-        android:id="@+id/rememberMe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Checkbox" />
+            <EditText
+                android:id="@+id/passwordedit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="password"
+                android:ems="10"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="100dp"
+                tools:layout_editor_absoluteY="399dp" />
 
+            <View
+                android:id="@+id/divider"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#888888"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="316dp" />
 
-    <EditText
-        android:id="@+id/useridedit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
-    <View
-        android:id="@+id/divider"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#888888" />
+            <CheckBox
+                android:id="@+id/rememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember_me"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="154dp"
+                tools:layout_editor_absoluteY="463dp" />
 
-    <TextView
-        android:id="@+id/helperText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot your password?" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/uplan_title"
+                android:textSize="105sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="64dp"
+                tools:layout_editor_absoluteY="67dp" />
+
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="105dp"
+                android:layout_height="48dp"
+                android:text="@string/signin_button_text"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="511dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
